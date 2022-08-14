@@ -37,4 +37,18 @@ func main() {
 	changeBalance := postToken - preToken
 	pp.Println("Change of balance: ", changeBalance)
 
+	//get the the timestamp of the latest block
+	slot, err := client.GetSlot(
+		context.TODO(),
+		rpc.CommitmentFinalized,
+	)
+	if err != nil {
+		log.Fatalln("get balance error", err)
+	}
+	block, err := client.GetBlock(
+		context.Background(),
+		uint64(slot),
+	)
+	pp.Println("slot of the latest block :", slot)
+	pp.Println("timestamp : ", uint64(*block.BlockTime))
 }
