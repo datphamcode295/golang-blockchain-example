@@ -2,7 +2,10 @@ module github.com/datphamcode295/golang-rpc-solana-example
 
 go 1.18
 
-require github.com/gagliardetto/solana-go v1.5.0
+require (
+	github.com/gagliardetto/solana-go v1.5.0
+	github.com/k0kubun/pp/v3 v3.1.0
+)
 
 require (
 	contrib.go.opencensus.io/exporter/stackdriver v0.13.4 // indirect
@@ -17,7 +20,6 @@ require (
 	github.com/gagliardetto/treeout v0.1.4 // indirect
 	github.com/golang/groupcache v0.0.0-20200121045136-8c9f03a8e57e // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/k0kubun/pp/v3 v3.1.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/logrusorgru/aurora v2.0.3+incompatible // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
